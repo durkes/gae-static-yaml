@@ -1,0 +1,14 @@
+version: 1
+runtime: php55
+api_version: 1
+
+handlers:
+- url: /test.html
+  static_files: static/test.html
+  upload: static/test.html
+- url: /foo/bar.html
+  static_files: static/foo/bar.html
+  upload: static/foo/bar.html
+
+- url: /.*
+  script: error/404.php

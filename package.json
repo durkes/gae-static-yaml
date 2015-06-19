@@ -1,0 +1,30 @@
+{
+  "name": "gae-static-yaml",
+  "version": "0.1.1",
+  "description": "Automatically generate a GAE app.yaml file with a handler for every static file - for use with a custom 404 handler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/durkes/gae-static-yaml.git"
+      },
+      "keywords": [
+      "app.yaml",
+      "Google App Engine",
+      "GAE",
+      "static files",
+      "custom 404",
+      "generator"
+      ],
+      "author": "github.com/durkes",
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/durkes/gae-static-yaml/issues"
+        },
+        "homepage": "https://github.com/durkes/gae-static-yaml",
+        "dependencies": {
+          "findit2": "^2.2.3"
+        }
+      }
