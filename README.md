@@ -20,7 +20,7 @@ $ npm install gae-static-yaml
 ```
 
 ## template.yaml
-Create a yaml template (named something other than app.yaml - we're calling it template.yaml) and include a placeholder variable for the static file handlers (%STATIC):
+Create a yaml template (named something other than app.yaml - we're calling it template.yaml) and include a placeholder variable for the static file handlers (%STATIC%):
 ```yaml
 version: 1
 runtime: php55
