@@ -5,23 +5,21 @@ Automatically generate a GAE app.yaml file with a handler for every static file 
 The purpose of gae-static-yaml is to easily generate an app.yaml file for Google App Engine, including a static file handler for every static file in your module. By explicitly defining a handler for each file, you can then us e a catch-all handler to serve a custom 404 page. (Note: You will need to serve your 404 page with a script in order to set the 404 status header.)
 
 ### Table of Contents
- * [Getting started](#getting-started)
-  * [Installation](#installation)
-  * [template.yaml](#template-yaml)
-  * [Config](#config)
-  * [Deploy](#deploy)
+ * [Installation](#installation)
+ * [template.yaml](#template-yaml)
+ * [Config](#config)
+ * [Deploy](#deploy)
  * [Example](#example)
 
-## Getting started
+## Installation
 If you do not already have Node.js installed, you will need to install it from [nodjs.org](http://www.nodejs.org/).
 
-#### Installation
 Inside (or near) your project directory, from the command line:
 ```bash
 $ npm install gae-static-yaml
 ```
 
-#### template.yaml
+## template.yaml
 Create a yaml template (named something other than app.yaml - we're calling it template.yaml) and include a placeholder variable for the static file handlers (%STATIC):
 ```yaml
 version: 1
@@ -34,7 +32,7 @@ handlers:
   script: error/404.php
 ```
 
-#### Config
+## Config
 Create a JavaScript file (named yaml.js) to configure and run gae-static-yaml:
 ```js
 var yaml = require('gae-static-yaml');
@@ -61,7 +59,7 @@ yaml(config, function (request, file, next) {
 });
 ```
 
-#### Deploy
+## Deploy
 Generate your app.yaml file:
 ```bash
 $ node yaml
@@ -72,7 +70,7 @@ Deploy by specifying app.yaml
 $ appcfg.py -A PROJECT update app.yaml
 ```
 
-#### Example
+## Example
 See an [example](example) including the directory structure, [config](example/yaml.js), [template.yaml](example/template.yaml), and generated [app.yaml](example/app.yaml) file.
 
 ### License

@@ -1,6 +1,6 @@
 {
   "name": "gae-static-yaml",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Automatically generate a GAE app.yaml file with a handler for every static file - for use with a custom 404 handler.",
   "main": "index.js",
   "scripts": {
