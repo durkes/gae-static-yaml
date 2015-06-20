@@ -53,7 +53,7 @@ yaml(config, function (request, file, next) {
 
 	request = request.replace('static', '');
 
-	//Alternatively, you can skip a file entry by setting request or file to '';
+	// Alternatively, you can skip a file entry by setting request or file to '';
 
 	next(request, file);
 });
